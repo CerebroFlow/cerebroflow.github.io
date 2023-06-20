@@ -7,14 +7,6 @@ sr.reveal('header', {
   distance: '50px'
 });
 
-sr.reveal('.hero-content', {
-  duration: 1000,
-  easing: 'ease-in-out',
-  origin: 'bottom',
-  distance: '50px',
-  delay: 500
-});
-
 sr.reveal('.section', {
   duration: 1000,
   easing: 'ease-in-out',
@@ -25,10 +17,9 @@ sr.reveal('.section', {
 
 window.addEventListener('scroll', () => {
   const header = document.querySelector('header');
-  const heroContent = document.querySelector('.hero-content');
   const sections = document.querySelectorAll('.section');
 
-  if (window.scrollY > heroContent.offsetTop + heroContent.offsetHeight) {
+  if (window.scrollY > 0) {
     header.classList.add('show');
   } else {
     header.classList.remove('show');
