@@ -1,157 +1,69 @@
-/* styles.css */
-
-/* Global Styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: black;
-    color: white;
-  }
-  
-  a {
-    color: orange;
-    text-decoration: none;
-  }
-  
-  h1, h2, h3 {
-    color: gold;
-  }
-  
-  /* Header Styles */
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: black;
-  }
-  
-  .logo img {
-    width: 100px;
-  }
-  
-  .menu {
-    position: relative;
-  }
-  
-  .menu-toggle {
-    display: none;
-  }
-  
-  .menu-toggle + label {
-    cursor: pointer;
-    color: orange;
-    font-size: 24px;
-  }
-  
-  nav {
-    position: absolute;
-    top: 100%;
+header {
+    position: fixed;
+    top: 0;
     left: 0;
     width: 100%;
-    background-color: black;
-    display: none;
-    padding: 10px;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity 0.5s, transform 0.5s;
+    z-index: 999;
   }
   
-  nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-  }
-  
-  nav ul li {
-    margin-right: 20px;
-  }
-  
-  nav ul li a {
-    color: white;
-  }
-  
-  /* Main Styles */
-  main {
-    padding: 20px;
+  header img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 80px;
   }
   
   .hero {
-    text-align: center;
-  }
-  
-  .hero img {
-    width: 100%;
-    max-width: 800px;
-    height: auto;
-    margin-bottom: 20px;
-  }
-  
-  .cta-button {
-    display: inline-block;
-    background-color: orange;
-    color: black;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .app-intro {
-    margin-bottom: 40px;
-  }
-  
-  .app-features ul {
+    height: 100vh;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s;
   }
   
-  .app-features li {
+  .hero-content {
     text-align: center;
-    width: 200px;
-    margin: 20px;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.5s, transform 0.5s;
   }
   
-  .app-demos {
-    text-align: center;
+  .content {
+    margin-top: 100px;
+    /* Add the remaining styles */
   }
   
-  .demo-item {
-    margin-bottom: 20px;
+  .show {
+    opacity: 1;
+    transform: translateY(0%);
   }
   
-  .demo-item img {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
+  .section {
+    opacity: 0;
+    transform: translateY(50%);
+    transition: opacity 0.5s, transform 0.5s;
   }
   
-  /* Footer Styles */
+  .section.reveal {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  
+  .features {
+    /* Add the styles for the features section */
+  }
+  
+  .demos {
+    /* Add the styles for the demos section */
+  }
+  
   footer {
-    background-color: black;
-    padding: 20px;
-    text-align: center;
+    /* Add the styles for the footer section */
   }
-  
-  .social-media-links {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 20px;
-  }
-  
-  .social-media-links li {
-    display: inline-block;
-    margin-right: 10px;
-  }
-  
-  .social-media-links li a img {
-    width: 24px;
-    height: 24px;
-  }
-  
-  footer p, footer a {
-    color: white;
-    margin: 0;
-  }
-  
   

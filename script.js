@@ -1,63 +1,42 @@
-// JavaScript code
+const sr = ScrollReveal();
 
-// Function to animate the hero section on page load
-function animateHero() {
-    var heroImage = document.querySelector(".hero img");
-    var heroText = document.querySelector(".hero .hero-text");
-  
-    heroImage.style.opacity = 0;
-    heroText.style.opacity = 0;
-    
-    setTimeout(function() {
-      heroImage.style.transition = "opacity 1s";
-      heroText.style.transition = "opacity 1s";
-      heroImage.style.opacity = 1;
-      heroText.style.opacity = 1;
-    }, 500);
+sr.reveal('header', {
+  duration: 1000,
+  easing: 'ease-in-out',
+  origin: 'top',
+  distance: '50px'
+});
+
+sr.reveal('.hero-content', {
+  duration: 1000,
+  easing: 'ease-in-out',
+  origin: 'bottom',
+  distance: '50px',
+  delay: 500
+});
+
+sr.reveal('.section', {
+  duration: 1000,
+  easing: 'ease-in-out',
+  origin: 'bottom',
+  distance: '50px',
+  interval: 200
+});
+
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('header');
+  const heroContent = document.querySelector('.hero-content');
+  const sections = document.querySelectorAll('.section');
+
+  if (window.scrollY > heroContent.offsetTop + heroContent.offsetHeight) {
+    header.classList.add('show');
+  } else {
+    header.classList.remove('show');
   }
-  
-  // Function to animate the app features section on scroll
-  function animateFeatures() {
-    var featuresSection = document.querySelector(".app-features");
-    var featureItems = document.querySelectorAll(".app-features li");
-  
-    var featuresSectionOffset = featuresSection.offsetTop;
-    var windowHeight = window.innerHeight;
-  
-    if (window.pageYOffset > featuresSectionOffset - windowHeight) {
-      featureItems.forEach(function(item, index) {
-        setTimeout(function() {
-          item.style.transform = "translateY(0)";
-          item.style.opacity = 1;
-        }, index * 200);
-      });
+
+  sections.forEach((section) => {
+    if (window.scrollY > section.offsetTop + section.offsetHeight / 2 - window.innerHeight / 2) {
+      section.classList.add('reveal');
     }
-  }
-  
-  // Function to animate the app demos section on scroll
-  function animateDemos() {
-    var demosSection = document.querySelector(".app-demos");
-    var demoItems = document.querySelectorAll(".demo-item");
-  
-    var demosSectionOffset = demosSection.offsetTop;
-    var windowHeight = window.innerHeight;
-  
-    if (window.pageYOffset > demosSectionOffset - windowHeight) {
-      demoItems.forEach(function(item, index) {
-        setTimeout(function() {
-          item.style.transform = "scale(1)";
-          item.style.opacity = 1;
-        }, index * 200);
-      });
-    }
-  }
-  
-  // Event listener for the page load event
-  window.addEventListener("load", animateHero);
-  
-  // Event listener for the scroll event
-  window.addEventListener("scroll", function() {
-    animateFeatures();
-    animateDemos();
   });
-  
+});
