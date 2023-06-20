@@ -1,0 +1,157 @@
+/* styles.css */
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+  }
+  
+  a {
+    color: orange;
+    text-decoration: none;
+  }
+  
+  h1, h2, h3 {
+    color: gold;
+  }
+  
+  /* Header Styles */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: black;
+  }
+  
+  .logo img {
+    width: 100px;
+  }
+  
+  .menu {
+    position: relative;
+  }
+  
+  .menu-toggle {
+    display: none;
+  }
+  
+  .menu-toggle + label {
+    cursor: pointer;
+    color: orange;
+    font-size: 24px;
+  }
+  
+  nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    display: none;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: white;
+  }
+  
+  /* Main Styles */
+  main {
+    padding: 20px;
+  }
+  
+  .hero {
+    text-align: center;
+  }
+  
+  .hero img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    background-color: orange;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .app-intro {
+    margin-bottom: 40px;
+  }
+  
+  .app-features ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .app-features li {
+    text-align: center;
+    width: 200px;
+    margin: 20px;
+  }
+  
+  .app-demos {
+    text-align: center;
+  }
+  
+  .demo-item {
+    margin-bottom: 20px;
+  }
+  
+  .demo-item img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+  }
+  
+  /* Footer Styles */
+  footer {
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .social-media-links {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  
+  .social-media-links li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .social-media-links li a img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  footer p, footer a {
+    color: white;
+    margin: 0;
+  }
+  
+  
